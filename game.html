@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-30708.png">
+  <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/trouble.css">
+  <script src="JS/game.js" charset="utf-8"></script>
+  <title>Trouble: Game</title>
+</head>
+
+<body onload="addName()">
+  <div class="game">
+    <div class="gameBoard">
+      <canvas id="myCanvas" width="950" height="950"></canvas>
+      <script src="JS/canvas.js"></script>
+      <p id="firstNameOnBoard"></p>
+      <p id="secondNameOnBoard"></p>
+      <p id="thirdNameOnBoard"></p>
+      <p id="fourthNameOnBoard"></p>
+      <div id="pegPosition"></div>
+    </div>
+    <div class="playButton">
+      <div id="dice">
+        <h1>Get Started!</h4>
+          <img src="img/dice/6.svg" alt="dice">
+          <p>Now get your pegs!</p>
+      </div>
+      <div class="playingButton">
+        <button type="button" name="button" onclick="getPegs()" id="rollButton">Get your pegs!</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

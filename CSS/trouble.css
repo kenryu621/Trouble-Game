@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+body {
+  font-family: Cairo;
+  background-color: #f2f2f2;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.indexForm, #nameForm {
+  font-size: 3vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.indexForm>* {
+  margin: 3vh;
+}
+
+#playerNum, .playerNameIn {
+  padding: 1vh;
+  font-size: 2vh;
+  transition: .5s;
+  border: 1px solid #2196f3;
+  font-family: Cairo;
+}
+
+.playerNameIn {
+  margin-bottom: 2vh;
+}
+
+#playerNum:focus, .playerNameIn:focus {
+  border-radius: .5em;
+  outline: none;
+}
+
+#playerNumSubmit, #playerNumReset, #playerNameSubmit, #playerNameReset {
+  padding: 1vh;
+  font-size: 2vh;
+  background-color: #0069c0;
+  color: white;
+  border: none;
+  transition: .5s;
+  font-family: Cairo;
+}
+
+#playerNumSubmit:hover, #playerNumReset:hover, #playerNameSubmit:hover, #playerNameReset:hover {
+  background-color: #2196f3;
+  cursor: pointer;
+  border-radius: 0.25em;
+}
+
+#indexH1 {
+  text-align: center;
+  font-size: 4vh;
+}
+
+#creator {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#creator>* {
+  margin: .5vh;
+}
+
+#nameForm>div>* {
+  margin: 0 4vh;
+}
+
+.playerNameLabel:first-child {
+  color: #f43336;
+}
+
+.playerNameLabel:nth-child(3) {
+  color: #65c070;
+}
+
+.playerNameLabel:nth-child(5) {
+  color: #f4be26;
+}
+
+.playerNameLabel:nth-child(7) {
+  color: #1b93f2;
+}
+
+/* Game.html */
+.game {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.gameBoard {
+  height: 100%;
+  width: 50%;
+}
+
+.gameBoard>canvas {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+canvas {
+  border: 1px solid black;
+  background-image: url("../img/fin1.jpg");
+}
+
+#firstNameOnBoard, #secondNameOnBoard, #thirdNameOnBoard, #fourthNameOnBoard {
+  position: absolute;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+}
+
+#firstNameOnBoard {
+  top: 15%;
+  left: 1.5%;
+}
+
+#secondNameOnBoard {
+  top: 81%;
+  left: 1.5%;
+}
+
+#thirdNameOnBoard {
+  top: 81%;
+  left: 43%;
+}
+
+#fourthNameOnBoard {
+  top: 15%;
+  left: 43%;
+}
+
+.playButton {
+  width: 50%;
+  height: auto;
+}
+
+#dice, .playingButton {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dice {
+  flex-direction: column;
+}
+
+#dice>p {
+  font-size: 1.5em;
+}
+
+#dice>img {
+  height: 20%;
+  width: auto;
+}
+
+#rollButton {
+  padding: 1vh 2vh;
+  background-color: white;
+  border: 1px solid blue;
+  font-family: Cairo;
+  font-size: 2vh;
+  cursor: pointer;
+  margin: 1vh;
+}
+
+#nextPlayer {
+  padding: 1vh 2vh;
+  background-color: white;
+  border: 1px solid blue;
+  font-family: Cairo;
+  font-size: 2vh;
+  cursor: pointer;
+  margin: 1vh;
+}
+
+/* Pegs position */
+#pegPosition>div {
+  position: absolute;
+  height: 3.5vh;
+  width: 3.5vh;
+}
+
+.player1peg, .player2peg, .player3peg, .player4peg {
+  height: 100%;
+  width: 100%;
+  border-radius: 2em;
+  border: 2px solid black;
+}
+
+.enableClick {
+  cursor: pointer;
+  border: 3px double;
+  border-color: #ff0000 #00ff00 #0000ff #ffff00;
+}
+
+.player1peg {
+  background-color: #ff8585;
+}
+
+.player2peg {
+  background-color: #ffe499;
+}
+
+.player3peg {
+  background-color: #92ff92;
+}
+
+.player4peg {
+  background-color: #83c7ff;
+}
+
+#pos57 {
+  top: 4%;
+  left: 2%;
+}
+
+#pos58 {
+  top: 4%;
+  left: 5%;
+}
+
+#pos59 {
+  top: 10%;
+  left: 2%;
+}
+
+#pos60 {
+  top: 10%;
+  left: 5%;
+}
+
+#pos61 {
+  top: 87%;
+  left: 2%;
+}
+
+#pos62 {
+  top: 87%;
+  left: 5%;
+}
+
+#pos63 {
+  top: 93%;
+  left: 2%;
+}
+
+#pos64 {
+  top: 93%;
+  left: 5%;
+}
+
+#pos65 {
+  top: 87%;
+  left: 43.5%;
+}
+
+#pos66 {
+  top: 87%;
+  left: 46.5%;
+}
+
+#pos67 {
+  top: 93%;
+  left: 43.5%;
+}
+
+#pos68 {
+  top: 93%;
+  left: 46.5%;
+}
+
+#pos69 {
+  top: 4%;
+  left: 43.5%;
+}
+
+#pos70 {
+  top: 4%;
+  left: 46.5%;
+}
+
+#pos71 {
+  top: 10%;
+  left: 43.5%;
+}
+
+#pos72 {
+  top: 10%;
+  left: 46.5%;
+}
+
+/* Track position */
+#pos1 {
+  top: 43%;
+  left: 9.75%;
+}
+
+#pos2 {
+  top: 43%;
+  left: 12.625%;
+}
+
+#pos3 {
+  top: 43%;
+  left: 15.5%;
+}
+
+#pos4 {
+  top: 43%;
+  left: 18.375%;
+}
+
+#pos5 {
+  top: 43%;
+  left: 21.25%;
+}
+
+#pos6 {
+  top: 37%;
+  left: 21.25%;
+}
+
+#pos7 {
+  top: 31%;
+  left: 21.25%;
+}
+
+#pos8 {
+  top: 25%;
+  left: 21.25%;
+}
+
+#pos9 {
+  top: 19%;
+  left: 21.25%;
+}
+
+#pos10 {
+  top: 19%;
+  left: 24.125%;
+}
+
+#pos11 {
+  top: 19%;
+  left: 27%;
+}
+
+#pos12 {
+  top: 25%;
+  left: 27%;
+}
+
+#pos13 {
+  top: 31%;
+  left: 27%;
+}
+
+#pos14 {
+  top: 37%;
+  left: 27%;
+}
+
+#pos15 {
+  top: 43%;
+  left: 27%;
+}
+
+#pos16 {
+  top: 43%;
+  left: 29.875%;
+}
+
+#pos17 {
+  top: 43%;
+  left: 32.75%;
+}
+
+#pos18 {
+  top: 43%;
+  left: 35.625%;
+}
+
+#pos19 {
+  top: 43%;
+  left: 38.75%;
+}
+
+#pos20 {
+  top: 49%;
+  left: 38.75%;
+}
+
+#pos21 {
+  top: 55%;
+  left: 38.75%;
+}
+
+#pos22 {
+  top: 55%;
+  left: 35.625%;
+}
+
+#pos23 {
+  top: 55%;
+  left: 32.75%;
+}
+
+#pos24 {
+  top: 55%;
+  left: 29.875%;
+}
+
+#pos25 {
+  top: 55%;
+  left: 27%;
+}
+
+#pos26 {
+  top: 60%;
+  left: 27%;
+}
+
+#pos27 {
+  top: 66%;
+  left: 27%;
+}
+
+#pos28 {
+  top: 72%;
+  left: 27%;
+}
+
+#pos29 {
+  top: 78%;
+  left: 27%;
+}
+
+#pos30 {
+  top: 78%;
+  left: 24.125%;
+}
+
+#pos31 {
+  top: 78%;
+  left: 21.25%;
+}
+
+#pos35 {
+  top: 55%;
+  left: 21.25%;
+}
+
+#pos34 {
+  top: 60%;
+  left: 21.25%;
+}
+
+#pos33 {
+  top: 66%;
+  left: 21.25%;
+}
+
+#pos32 {
+  top: 72%;
+  left: 21.25%;
+}
+
+#pos39 {
+  top: 55%;
+  left: 9.75%;
+}
+
+#pos38 {
+  top: 55%;
+  left: 12.625%;
+}
+
+#pos37 {
+  top: 55%;
+  left: 15.5%;
+}
+
+#pos36 {
+  top: 55%;
+  left: 18.375%;
+}
+
+#pos40 {
+  top: 49%;
+  left: 9.75%;
+}
+
+/* Red safe line */
+#pos41 {
+  top: 49%;
+  left: 12.625%;
+}
+
+#pos42 {
+  top: 49%;
+  left: 15.5%;
+}
+
+#pos43 {
+  top: 49%;
+  left: 18.375%;
+}
+
+#pos44 {
+  top: 49%;
+  left: 21.25%;
+}
+
+/* Yellow Saft Line */
+#pos45 {
+  top: 72%;
+  left: 24.125%;
+}
+
+#pos46 {
+  top: 66%;
+  left: 24.125%;
+}
+
+#pos47 {
+  top: 60%;
+  left: 24.125%;
+}
+
+#pos48 {
+  top: 55%;
+  left: 24.125%;
+}
+
+/* Green Saft Line */
+#pos49 {
+  top: 49%;
+  left: 35.625%;
+}
+
+#pos50 {
+  top: 49%;
+  left: 32.75%;
+}
+
+#pos51 {
+  top: 49%;
+  left: 29.875%;
+}
+
+#pos52 {
+  top: 49%;
+  left: 27%;
+}
+
+/* Blue Safe Line */
+#pos53 {
+  top: 25%;
+  left: 24.125%;
+}
+
+#pos54 {
+  top: 31%;
+  left: 24.125%;
+}
+
+#pos55 {
+  top: 37%;
+  left: 24.125%;
+}
+
+#pos56 {
+  top: 43%;
+  left: 24.125%;
+}
